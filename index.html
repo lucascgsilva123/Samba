@@ -33,32 +33,81 @@
 
         <!-- Menu vertival -->
         <div class="menu">
-            <div class="md-form mt-2 mb-2 ml-2 mr-2" id="search-box">
-                <input id="search" class="form-control" type="text" placeholder="Search" aria-label="Search">
-            </div>
-            <ul class="side-menu">
-                <li><a href="#"><i class="icon left fas fa-columns"></i>Home</a></li>
-                <li class="activado"><a href="#"><i class="icon left fas fa-user-shield"></i>Status<i
-                                    class="icon right fas fa-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="#"><i class="icon left fas fa-laptop text-danger"></i>Hardware</a></li>
-                        <li><a href="#"><i class="icon left fas fa-window-restore text-success"></i>Softwares</a></li>
-                        <li><a href="#"><i class="icon left fas fa-project-diagram text-info"></i>Rede</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <li><a href="#"><i class="icon left fas fa-server text-warning"></i>Servidor</a></li>
-                </li>
-                <li>1
-                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary btn-lg rounded-0"><i
-                                        class="fas fa-terminal"></i></button>
-                        <button type="button" class="btn btn-secondary btn-lg rounded-0"><i class="fas fa-user-alt">
-                                        Root</i></button>
-                        <button type="button" class="btn btn-secondary btn-lg rounded-0" onclick="location.href='pages/login.html'"><i class="fas fa-sign-in-alt"></i></button>
-                    </div>
-                </li>
-            </ul>
+                <nav class="col-md-10 d-none d-md-block bg-light sidebar">
+                        <div class="sidebar-sticky">
+                          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>Servidor Samba</span>
+                          </h6>
+                          <ul class="nav flex-column">
+                            <li class="nav-item">
+                              <a class="nav-link active" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                                Home
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                                Globals
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                Shares
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+                                Printers
+                              </a>
+                            </li>
+                          </ul>
+                
+                          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>Admin</span>
+                          </h6>
+                          <ul class="nav flex-column mb-2">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon></svg>
+                                Active Directory
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download-cloud"><polyline points="8 17 12 21 16 17"></polyline><line x1="12" y1="12" x2="12" y2="21"></line><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"></path></svg>
+                                Download 
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                                Restaurar Configurações
+                              </a>
+                            </li>
+                          </ul>
+                
+                          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>Settings</span>
+                          </h6>
+                          <ul class="nav flex-column mb-2">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sliders"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+                                 Settings
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                 Alterar Usuários
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </nav>
         </div>
 
         <!-- Menu horizontal superior -->
