@@ -1,3 +1,4 @@
+// Hora{
 var dateinfo = document.querySelector('#datehora');
 
 function RetornaDataHoraAtual() {
@@ -6,3 +7,4 @@ function RetornaDataHoraAtual() {
 
 }
 setInterval(RetornaDataHoraAtual, 1000);
+// }
