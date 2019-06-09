@@ -1,0 +1,22 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr;
+    grid-template-rows: 0.2fr 1.8fr;
+    grid-template-areas: "logo header" "menu contant";
+}
+
+.menu-header {
+    grid-area: logo;
+}
+
+.menu-body {
+    grid-area: menu;
+}
+
+.header {
+    grid-area: header;
+}
+
+.contant {
+    grid-area: contant;
+}
