@@ -5,11 +5,11 @@
     grid-template-areas: "logo header" "menu contant";
 }
 
-.menu-header {
+.logo {
     grid-area: logo;
 }
 
-.menu-body {
+.menu {
     grid-area: menu;
 }
 

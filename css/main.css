@@ -1,0 +1,16 @@
+.distancia-top {
+    padding-top: 25px;
+}
+
+.vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    margin: auto;
+}
+
+.img-card {
+    width: 70%;
+    height: 60%;
+}

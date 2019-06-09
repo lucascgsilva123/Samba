@@ -41,3 +41,14 @@ ul,
 .active {
     display: block;
 }
+
+.imagem {
+    width: 250px;
+    height: 54px;
+    padding: .5rem 1rem;
+}
+
+.menu-imagem {
+    padding: 0px;
+    margin: 0;
+}
