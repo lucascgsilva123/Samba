@@ -10,21 +10,32 @@ $(function() {
                 r.push(data.instance.get_node(data.selected[i]).text);
             }
             const header = `<button onclick="clickInf()" id="inf">Informações</button>
-                            <button onclick="clickDir()" id="dir">Diretorios</button>`
-            const body = `Selected:  ${r.join(', ')}`
+                            <button onclick="diretorios()" id="dir">Diretorios</button>`
+            const body = `<div class="card-body" id="event_body">
+                            Selected:  ${r.join(', ')}
+                        </div>`
             $('#event_header').html(header);
             $('#event_body').html(body);
         })
 });
-//a
+
 //$('#event_result').html('Selected: ' + r.join(', '));
 
-function clickDir() {
-    const texto1 = `Diretorios`
-    $('#event_body').html(texto1);
+function clickDir(j) {
+    $('#event_body').jstree({
+        'core': {
+            'data': j
+        }
+    });
 }
 
 function clickInf() {
     const texto2 = `Teste!!!!!!!!!!!!!!`
     $('#event_body').html(texto2);
+}
+
+function diretorios() {
+    fetch('../data/teste.json')
+        .then(res => res.json())
+        .then(json => clickDir(json))
 }
