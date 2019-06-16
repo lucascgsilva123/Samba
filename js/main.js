@@ -16,7 +16,7 @@ $(function() {
             $('#event_body').html(body);
         })
 });
-
+//a
 //$('#event_result').html('Selected: ' + r.join(', '));
 
 function clickDir() {
