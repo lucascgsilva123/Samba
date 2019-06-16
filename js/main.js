@@ -11,9 +11,7 @@ $(function() {
             }
             const header = `<button onclick="clickInf()" id="inf">Informações</button>
                             <button onclick="diretorios()" id="dir">Diretorios</button>`
-            const body = `<div class="card-body" id="event_body">
-                            Selected:  ${r.join(', ')}
-                        </div>`
+            const body = `Selected:  ${r.join(', ')}`
             $('#event_header').html(header);
             $('#event_body').html(body);
         })
@@ -22,7 +20,8 @@ $(function() {
 //$('#event_result').html('Selected: ' + r.join(', '));
 
 function clickDir(j) {
-    $('#event_body').jstree({
+    $('#event_body').html('<div id="diretorio"></div>')
+    $('#diretorio').jstree({
         'core': {
             'data': j
         }
@@ -30,7 +29,7 @@ function clickDir(j) {
 }
 
 function clickInf() {
-    const texto2 = `Teste!!!!!!!!!!!!!!`
+    const texto2 = `Teste!!!`
     $('#event_body').html(texto2);
 }
 
