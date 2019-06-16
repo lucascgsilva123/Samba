@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<!--OKKK-->
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -117,14 +117,17 @@
             <!-- Árvore com os grupos e Usuários -->
             <div class="col-3 d-flex justify-content-center" id="jstree">
                 <ul>
-                    <li>Grupo 1
+                    <li data-jstree='{ "icon" :"fas fa-users"}'>Grupo 1
                         <ul>
-                            <li>Usuário 1</li>
-                            <li>Usuário 2</li>
+                            <li data-jstree='{"icon":"far fa-user"}'>Usuário 1</li>
+                            <li data-jstree='{"icon":"far fa-user"}'>Usuário 2</li>
                         </ul>
                     </li>
-                    <li>Grupo 2</li>
+                    <li data-jstree='{"icon":"fas fa-users"}'>Grupo 2</li>
                 </ul>
+                <div id="using_json_2">
+
+                </div>
             </div>
 
             <!-- Card com as informçãoes -->
@@ -152,6 +155,7 @@
 
     <!-- Icones jsTree-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+
 </body>
 
 </html>
