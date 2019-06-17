@@ -1,7 +1,3 @@
-fetch('../data/user.json')
-    .then(res => res.json())
-    .then(json => usuarios(json))
-
 $(function() {
     //Cria uma instância quando o DOM estiver pronto
     $('#jstree').jstree();
@@ -15,36 +11,31 @@ $(function() {
             }
             const header = `<button onclick="clickInf()" id="inf">Informações</button>
                             <button onclick="diretorios()" id="dir">Diretorios</button>`
-            const body = `Selected:  ${r.join(', ')}`
+            const body = `<div class="card-body" id="event_body">
+                            Selected:  ${r.join(', ')}
+                        </div>`
             $('#event_header').html(header);
             $('#event_body').html(body);
         })
 });
 
+//$('#event_result').html('Selected: ' + r.join(', '));
+
 function clickDir(j) {
-    $('#event_body').html('<div id="diretorio"></div>')
-    $('#diretorio').jstree({
+    $('#event_body').jstree({
         'core': {
             'data': j
         }
     });
 }
 
-function usuarios(json) {
-    $('#jstree').jstree({
-        'core': {
-            'data': json
-        }
-    });
-}
-
 function clickInf() {
-    const texto2 = `Teste!!!`
+    const texto2 = `Teste!!!!!!!!!!!!!!`
     $('#event_body').html(texto2);
 }
 
 function diretorios() {
-    fetch('../data/diretorio.json')
+    fetch('../data/teste.json')
         .then(res => res.json())
         .then(json => clickDir(json))
 }
