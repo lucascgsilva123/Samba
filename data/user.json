@@ -1,21 +1,13 @@
-[{
-    "name": "usuario1",
-    "ID": "1",
-    "name_group": "grupo1",
-    "GID": "1"
-}, {
-    "name": "usuario2",
-    "ID": "2",
-    "name_group": "grupo1",
-    "GID": "1"
-}, {
-    "name": "usuario3",
-    "ID": "3",
-    "name_group": "grupo1",
-    "GID": "1"
-}, {
-    "name": "usuario4",
-    "ID": "4",
-    "name_group": "grupo2",
-    "GID": "2"
-}]
+[
+    { "id": "ajson1", "parent": "#", "text": "IFPB" },
+    { "id": "ajson2", "parent": "1", "text": "Renato" },
+    { "id": "ajson3", "parent": "1", "text": "Lucas" },
+    { "id": "ajson4", "parent": "1", "text": "João" },
+    { "id": "ajson5", "parent": "1", "text": "Maria" },
+    { "id": "ajson6", "parent": "#", "text": "Sistemaas para Internet" },
+    { "id": "ajson7", "parent": "6", "text": "João" },
+    { "id": "ajson8", "parent": "6", "text": "Maria" },
+    { "id": "ajson9", "parent": "#", "text": "Redes de Computadores" },
+    { "id": "ajson10", "parent": "9", "text": "Renato" },
+    { "id": "ajson11", "parent": "9", "text": "Lucas" }
+]
