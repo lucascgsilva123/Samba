@@ -1,7 +1,3 @@
-fetch('../data/user.json')
-    .then(res => res.json())
-    .then(json => usuarios(json))
-
 $(function() {
     //Cria uma instância quando o DOM estiver pronto
     $('#jstree').jstree();
@@ -21,6 +17,8 @@ $(function() {
         })
 });
 
+//$('#event_result').html('Selected: ' + r.join(', '));
+
 function clickDir(j) {
     $('#event_body').html('<div id="diretorio"></div>')
     $('#diretorio').jstree({
@@ -30,21 +28,13 @@ function clickDir(j) {
     });
 }
 
-function usuarios(json) {
-    $('#jstree').jstree({
-        'core': {
-            'data': json
-        }
-    });
-}
-
 function clickInf() {
-    const texto2 = `Teste!!!`
+    const texto2 = `Teste!!!!!`
     $('#event_body').html(texto2);
 }
 
 function diretorios() {
-    fetch('../data/diretorio.json')
+    fetch('../data/folder.json')
         .then(res => res.json())
         .then(json => clickDir(json))
 }
