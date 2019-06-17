@@ -1,13 +1,13 @@
 [
     { "id": "ajson1", "parent": "#", "text": "IFPB" },
-    { "id": "ajson2", "parent": "1", "text": "Renato" },
-    { "id": "ajson3", "parent": "1", "text": "Lucas" },
-    { "id": "ajson4", "parent": "1", "text": "João" },
-    { "id": "ajson5", "parent": "1", "text": "Maria" },
+    { "id": "ajson2", "parent": "ajson1", "text": "Renato" },
+    { "id": "ajson3", "parent": "ajson1", "text": "Lucas" },
+    { "id": "ajson4", "parent": "ajson1", "text": "João" },
+    { "id": "ajson5", "parent": "ajson1", "text": "Maria" },
     { "id": "ajson6", "parent": "#", "text": "Sistemaas para Internet" },
-    { "id": "ajson7", "parent": "6", "text": "João" },
-    { "id": "ajson8", "parent": "6", "text": "Maria" },
+    { "id": "ajson7", "parent": "ajson6", "text": "João" },
+    { "id": "ajson8", "parent": "ajson6", "text": "Maria" },
     { "id": "ajson9", "parent": "#", "text": "Redes de Computadores" },
-    { "id": "ajson10", "parent": "9", "text": "Renato" },
-    { "id": "ajson11", "parent": "9", "text": "Lucas" }
+    { "id": "ajson10", "parent": "ajson9", "text": "Renato" },
+    { "id": "ajson11", "parent": "ajson9", "text": "Lucas" }
 ]
