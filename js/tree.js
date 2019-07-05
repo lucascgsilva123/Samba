@@ -36,13 +36,22 @@ function usuarios(j) {
             .on('changed.jstree', function(e, data) {
                 var i, j, r = [];
                 for (i = 0, j = data.selected.length; i < j; i++) {
-                    r.push(data.instance.get_node(data.selected[i]).text);
-                }
-                const header = `<button onclick="clickInf()" id="inf">Informações</button>
+                    r.push(data.instance.get_node(data.selected[i]).parent);
+
+                    if (data.instance.get_node(data.selected[i]).parent != "#") {
+                        const header = `<button onclick="clickInf()" id="inf">Informações</button>
                                 <button onclick="diretorios()" id="dir">Diretorios</button>`
-                const body = `Selected:  ${r.join(', ')}`
-                $('#event_header').html(header);
-                $('#event_body').html(body);
+                        const body = `Selected:  ${r.join(', ')}`
+                        $('#event_header').html(header);
+                        $('#event_body').html(body);
+                    } else {
+                        const header = ''
+                        const body = `<img class="vertical-align img-card" src="/img/pasta.jpg">`
+                        $('#event_body').html(body);
+                        $('#event_header').html(header);
+                    }
+                }
+
             })
     });
 }
