@@ -1,4 +1,10 @@
-//$('#event_result').html('Selected: ' + r.join(', '));
+var usuario;
+
+function diretorios() {
+    fetch('../data/folder.json')
+        .then(res => res.json())
+        .then(json => clickDir(json))
+}
 
 function clickDir(j) {
     $('#event_body').html('<div id="diretorio"></div>')
@@ -10,15 +16,19 @@ function clickDir(j) {
 }
 
 function clickInf() {
-    const texto2 = `Teste!!!!!!!!!!!!!!`
-    $('#event_body').html(texto2);
+    Inf(usuario)
 }
 
-function diretorios() {
-    fetch('../data/folder.json')
-        .then(res => res.json())
-        .then(json => clickDir(json))
+function Inf(user) {
+    const texto = `<p>ID = ${user.id}</p>
+                    <p>Parent = ${user.parent}</p>
+                    <p>Nome = ${user.text}</p>`
+    $('#event_body').html(texto);
 }
+
+fetch('../data/user.json')
+    .then(res => res.json())
+    .then(json => usuarios(json));
 
 function usuarios(j) {
     $('#event_group').html('<div id="jstree"></div>')
@@ -41,9 +51,9 @@ function usuarios(j) {
                     if (data.instance.get_node(data.selected[i]).parent != "#") {
                         const header = `<button onclick="clickInf()" id="inf">Informações</button>
                                 <button onclick="diretorios()" id="dir">Diretorios</button>`
-                        const body = `Selected:  ${r.join(', ')}`
                         $('#event_header').html(header);
-                        $('#event_body').html(body);
+                        usuario = data.instance.get_node(data.selected[i]);
+                        $('#event_body').html(Inf(usuario));
                     } else {
                         const header = ''
                         const body = `<img class="vertical-align img-card" src="/img/pasta.jpg">`
@@ -51,11 +61,6 @@ function usuarios(j) {
                         $('#event_header').html(header);
                     }
                 }
-
             })
     });
 }
-
-fetch('../data/user.json')
-    .then(res => res.json())
-    .then(json => usuarios(json))
