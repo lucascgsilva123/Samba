@@ -1,4 +1,5 @@
 .grid-container {
+    background-color: rgba(86, 82, 122, 0.637);
     display: grid;
     grid-template-columns: 0.4fr 1.6fr;
     grid-template-rows: 0.2fr 1.8fr;
@@ -14,6 +15,7 @@
 }
 
 .header {
+    background-color: rgba(86, 82, 122, 0.637);
     grid-area: header;
 }
 
