@@ -14,3 +14,9 @@
     width: 70%;
     height: 60%;
 }
+
+#t-logo {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+}
